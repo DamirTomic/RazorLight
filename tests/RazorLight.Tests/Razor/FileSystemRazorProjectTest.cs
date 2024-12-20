@@ -54,6 +54,7 @@ namespace RazorLight.Tests.Razor
 		{
 			var project = new FileSystemRazorProject(DirectoryUtils.RootDirectory);
 
+			//Maybe you want to check if the file exists and then throw an exception if it doesn't?
 			await Assert.ThrowsAsync<ArgumentNullException>(async () => await project.GetItemAsync("not-existing-key"));
 		}
 
